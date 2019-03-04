@@ -1,0 +1,78 @@
+#skills {
+  @include section-line();
+  .process-list {
+    .compat-object-fit {
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 100px;
+      display: block;
+      margin: 0 auto;
+      background-position: center;
+      background-size: contain;
+    }
+    li {
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      padding: 0;
+      transition: $transition;
+      cursor: default;
+      &:hover{
+        .subtitle-small{
+          opacity: 1;
+          transition: $transition;
+        }
+      }
+      @include respond-to(phones-landscape) {
+        width: 49%;
+      }
+      @include respond-to(phones) {
+        width: 100%;
+      }
+      >div{
+        opacity: 0.3;
+      }
+      img {
+        display: none;
+      }
+      .subtitle-small {
+        font-weight: 900;
+        cursor: default;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-family: $main-font;
+        display: block;
+        color: $darknest-grey;
+        transition: $transition;
+      }
+      span {
+        font-family: $main-font;
+        display: block;
+        color: #444438;
+        font-size: 18px;
+        font-weight: 400;
+        cursor: default;
+      }
+    }
+  }
+  .plus{
+    margin-bottom: 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .high-level{
+    text-transform: uppercase;
+    font-weight: 700 !important;
+  }
+  .middle-level{
+    font-weight: 700 !important;
+  }
+  .elementary-level{
+
+  }
+}

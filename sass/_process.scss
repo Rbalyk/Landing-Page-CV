@@ -1,0 +1,69 @@
+#process {
+  @include section-line();
+  .process-list {
+    .compat-object-fit {
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 100px;
+      display: block;
+      margin: 0 auto;
+      background-position: center;
+      background-size: contain;
+    }
+    li {
+      display: inline-block;
+      width: 19%;
+      text-align: center;
+      opacity: 0.3;
+      position: relative;
+      padding: 0;
+      transition: $transition;
+      @include respond-to(tablets-portrait) {
+        width: 22%;
+      }
+      @include respond-to(phones-landscape) {
+        width: 170px;
+      }
+      @include respond-to(phones) {
+        width: 100%;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+      &:focus{
+        outline: none;
+      }
+      &:after {
+        content: '';
+        width: 20px;
+        height: 32px;
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        margin-top: -40px;
+        background: url('../icon/arrow-process-min.png') no-repeat;
+        @include respond-to(phones) {
+          display: none;
+        }
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+      img {
+        display: none;
+      }
+      span {
+        font-family: $main-font;
+        display: block;
+        color: $darknest-grey;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+  .opacityMinus{
+    opacity: 0.7 !important;
+  }
+}

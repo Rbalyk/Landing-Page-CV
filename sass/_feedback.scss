@@ -1,0 +1,103 @@
+#feedback-customers {
+  position: relative;
+  @include section-line();
+  .feedback-customers {
+    position: relative;
+    padding: 0 45px;
+    @include respond-to(phones){
+      padding: 0;
+    }
+    *{
+      outline: none !important;
+    }
+    .feedback-item{
+      cursor: pointer;
+      &:hover{
+        .linkedin{
+          &:after{
+            z-index: 1111;
+            transition:  all .5s ease-in-out;
+            right: -30px;
+            @include respond-to(tablets-portrait){
+              display: none;
+            }
+          }
+        }
+      }
+      .linkedin{
+        text-decoration: none;
+        width: 80px;
+        height: 30px;
+        display: block;
+        background: url("../icon/linkedin.svg") no-repeat left;
+        background-size: 80px;
+        position: relative;
+        &:after{
+          content: '';
+          width: 24px;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          background: #ffffff;
+          transition:  all .5s ease-in-out;
+          @include respond-to(tablets-portrait){
+            display: none;
+          }
+        }
+      }
+      p{
+        margin-bottom: 0 !important;
+      }
+    }
+    .slick-prev{
+      background: transparent url("../icon/slider-left-arrow.svg") no-repeat center 100%;
+      left: 0px;
+    }
+    .slick-next{
+      background: transparent url("../icon/slider-right-arrow.svg") no-repeat center 100%;
+      right: 0;
+    }
+    .slick-arrow{
+      font-size: 0;
+      border: 0;
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+    .slick-dots{
+      width: 100%;
+      text-align: center;
+      li{
+        display: inline-block;
+        padding: 0 10px;
+        button{
+          width: 15px;
+          height: 15px;
+          display: block;
+          background: rgba(33, 33, 33, 0.7);
+          opacity: 0.7;
+          border-radius: 50%;
+          font-size: 0;
+          border: 0;
+          box-shadow: none;
+          &:hover{
+            background: rgba(33, 33, 33, 1);
+          }
+          &:focus,&:active,&:visited{
+            outline: none;
+            border: 0;
+            box-shadow: none;
+          }
+        }
+      }
+      .slick-active{
+        button{
+          background: rgba(11, 11, 11, 1);
+        }
+      }
+    }
+
+  }
+}

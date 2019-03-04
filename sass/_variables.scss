@@ -1,0 +1,32 @@
+// BOOTSTRAP OVERRIDES
+// ========  CUSTOM VARIABLES  ========== //
+// COLORS
+$color-white: #ffffff;
+$dark-grey: rgba(33, 33, 33, 1); //for main text,title and footer background
+$darknest-grey: rgba(4, 4, 3, 1); //for line
+
+// HEIGHT AND DIMENSIONS
+$small-spacer: 10px;
+$medium-spacer: 15px;
+$large-spacer: 20px;
+$bigger-spacer: 30px;
+$long-spacer: 60px;
+//
+// TYPOGRAPHY
+//
+// Smaller font
+$size-small: 30px;
+$size-medium: 40px;
+$size-large: 60px;
+$size-title-small: 35px;
+$size-title-medium: 55px;
+$size-title-large: 70px;
+
+//Fonts
+$main-font: 'Raleway', sans-serif;
+$weight-large: 900;
+$weight-bold: 700;
+$weight-regular: 400;
+$weight-light: 100;
+
+$transition: all .5s ease-in-out;

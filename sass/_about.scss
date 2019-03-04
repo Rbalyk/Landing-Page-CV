@@ -1,0 +1,74 @@
+#about {
+  @include section-line();
+  .about-list {
+    li {
+      display: inline-block;
+      width: 19%;
+      text-align: center;
+      opacity: 0.5;
+      position: relative;
+      padding: 15px 0;
+      transition: $transition;
+      cursor: default;
+      &:hover{
+        transition: $transition;
+        opacity: 1;
+      }
+      @include respond-to(tablets-landscape) {
+        width: 30%;
+      }
+      @include respond-to(tablets-portrait) {
+        width: 40%;
+      }
+      @include respond-to(phones-landscape) {
+        width: 215px;
+      }
+      &:before, &:after {
+        content: '';
+        width: 45px;
+        height: 100%;
+        position: absolute;
+        display: block;
+        top: 5px;
+      }
+      &:before {
+        background: url('../icon/oil-branch-left-min.png') no-repeat center;
+        background-size: 35px;
+        left: 0;
+        @include respond-to(tablets-landscape) {
+          left: 35px;
+        }
+        @include respond-to(phones-landscape) {
+          left: 0;
+        }
+      }
+      &:after {
+        background: url('../icon/oil-branch-right-min.png') no-repeat center;
+        background-size: 35px;
+        right: 0;
+        @include respond-to(tablets-landscape) {
+          right: 35px;
+        }
+        @include respond-to(phones-landscape) {
+          right: 0;
+        }
+      }
+      .achievement, .achievement-option {
+        font-family: $main-font;
+        font-weight: 900;
+        font-size: 18px;
+        display: block;
+        color: $darknest-grey;
+      }
+      .achievement {
+        font-weight: 900;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+      .achievement-option {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+}

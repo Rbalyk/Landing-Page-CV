@@ -1,0 +1,11 @@
+#expirience{
+  @include section-line();
+  .item-company{
+    margin-bottom: 15px;
+    .company-position{
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  }
+
+}
